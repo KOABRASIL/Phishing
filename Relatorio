@@ -1,0 +1,79 @@
+### Relatório de Simulação de Ataque com o Social-Engineer Toolkit (SET)
+
+---
+
+#### **1. Resumo do Incidente**
+O ataque foi realizado em um ambiente de teste utilizando o **Social-Engineer Toolkit (SET)** para simular um cenário de engenharia social. O objetivo principal era demonstrar a possibilidade de captura de credenciais de um usuário fictício denominado **usuAIROP**, destacando as vulnerabilidades relacionadas ao comportamento humano.
+
+---
+
+#### **2. Ferramenta Utilizada**
+**Social-Engineer Toolkit (SET)**  
+- Versão: [Inserir versão utilizada]  
+- Módulo principal: **Website Attack Vectors**  
+- Vetor de ataque: **Credential Harvester**
+
+---
+
+#### **3. Descrição do Ataque**
+**3.1. Planejamento**  
+O ataque foi planejado para clonar uma página legítima de login de um serviço popular (e.g., e-mail corporativo ou banco). O objetivo era atrair o usuário para a página falsa e capturar suas credenciais ao tentar autenticar-se.
+
+**3.2. Execução**  
+1. **Clonagem da Página**  
+   - O módulo **Credential Harvester Attack Method** foi utilizado para criar uma réplica fiel da página de login do serviço fictício.
+   - O SET configurou o servidor local para capturar entradas de dados submetidas pelo usuário.
+
+2. **Entrega do Link Falso**  
+   - O link para a página de login falsa foi entregue por e-mail, simulando uma mensagem legítima de "atualização de segurança".
+   - O e-mail foi cuidadosamente elaborado com logotipo e assinatura digital similares aos do serviço verdadeiro.
+
+3. **Captura de Credenciais**  
+   - Quando o usuário **usuAIROP** acessou a página e inseriu suas credenciais, os dados foram capturados automaticamente pelo servidor do SET.
+
+---
+
+#### **4. Resultados**
+O ataque foi bem-sucedido, com os seguintes dados capturados:  
+- **Usuário:** usuAIROP  
+- **Senha:** [senha simulada]  
+
+Esses dados foram registrados em tempo real no console do SET e armazenados em um arquivo de log no ambiente controlado de teste.
+
+---
+
+#### **5. Medidas Mitigatórias**
+Para evitar que ataques similares sejam bem-sucedidos no futuro, são recomendadas as seguintes ações:  
+1. **Conscientização dos Usuários:**  
+   - Treinamentos regulares para identificar e evitar interações com links ou páginas suspeitas.
+   
+2. **Implementação de 2FA (Autenticação de Dois Fatores):**  
+   - Reduz a eficácia de ataques baseados na captura de credenciais.
+
+3. **Monitoramento de Tráfego Web:**  
+   - Analisar o tráfego da rede para identificar acessos a páginas que simulam serviços legítimos.
+
+4. **Validação de E-mails:**  
+   - Introduzir políticas rigorosas de verificação de remetentes em sistemas de e-mail corporativo.
+
+---
+
+#### **6. Observações**
+- O ataque foi realizado em **ambiente de teste** para fins de avaliação e conscientização, sem qualquer comprometimento de sistemas reais ou usuários.
+- **DNS spoofing não foi utilizado** nesta simulação. O usuário acessou o link falso por meio de interação direta.
+
+---
+
+#### **7. Conclusão**
+Este exercício demonstra como o SET pode ser utilizado para explorar falhas humanas em cenários de engenharia social. A captura de credenciais reforça a necessidade de implementar práticas de segurança robustas e programas educativos contínuos para mitigar riscos associados a ataques de phishing.
+
+--- 
+
+#### **8. Referências**
+- Social-Engineer Toolkit Documentation: [https://www.trustedsec.com](https://www.trustedsec.com)  
+- Boas Práticas de Segurança em Engenharia Social: [https://owasp.org](https://owasp.org)  
+
+---
+
+**Autor:** Keoma Sousa  
+**Data:** [Inserir data do relatório]
